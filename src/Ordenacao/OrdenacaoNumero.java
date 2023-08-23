@@ -1,2 +1,4 @@
-package Ordenacao;public class OrdenacaoNumero {
+package Ordenacao;
+
+public class OrdenacaoNumero {
 }
