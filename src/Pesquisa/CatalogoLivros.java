@@ -20,7 +20,7 @@ public class CatalogoLivros {
     //pesquisar por autor do livro
     public List<Livro> pesquisarPorAutor(String autor){
         List<Livro> livrosPorAutor =new ArrayList<>();
-        if (!LivroList.isEmpty()){
+        if (!livroList.isEmpty()){
             for (Livro l : livroList){
                 if (l.getAutor().equalsIgnoreCase(autor)){
                     livrosPorAutor.add(l);
@@ -33,9 +33,9 @@ public class CatalogoLivros {
 
         //pesquisa por intervalo de anos
 
-    public List<livro>pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){
+    public List<Livro>pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){
         List<Livro> livrosPorIntervaloAnos = new ArrayList<>();
-        if (!LivroList.isEmpty()){
+        if (!livroList.isEmpty()){
             for (Livro l : livroList) {
                 if (l.getAnoPublicacao() >= anoInicial && l.getAnoPublicacao() <= anoFinal) {
                     livrosPorIntervaloAnos.add(l);
@@ -61,16 +61,16 @@ public class CatalogoLivros {
     }
 
     public static void main(String[] args) {
-        CalatogoLivros calatogoLivros = new CatalogoLivros();
-        calatogoLivros.adicionarLivro("Livro 1", "Autor 1", 2020);
-        calatogoLivros.adicionarLivro("Livro 1", "Autor 1", 2021);
-        calatogoLivros.adicionarLivro("Livro 2", "Autor 2", 2022);
-        calatogoLivros.adicionarLivro("Livro 3", "Autor 3", 2021);
-        calatogoLivros.adicionarLivro("Livro 4", "Autor 4", 2023);
-        calatogoLivros.adicionarLivro("Livro 5", "Autor 5", 1993);
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 1", 2020);
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 1", 2021);
+        catalogoLivros.adicionarLivro("Livro 2", "Autor 2", 2022);
+        catalogoLivros.adicionarLivro("Livro 3", "Autor 3", 2021);
+        catalogoLivros.adicionarLivro("Livro 4", "Autor 4", 2023);
+        catalogoLivros.adicionarLivro("Livro 5", "Autor 5", 1993);
 
         //pesquisar livro por autor
-        System.out.println(catalogoLivros.pesquisarPorautor("Autor 2"));
+        System.out.println(catalogoLivros.pesquisarPorAutor("Autor 2"));
         //pesquisar por autor
         System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(2020, 2023));
         //pesquisar por título
